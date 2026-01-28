@@ -1,0 +1,10 @@
+.content-section {
+  min-height: 100vh;
+  height: 100vh;
+  background-color: #2a2a2a;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
