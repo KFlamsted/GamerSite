@@ -14,7 +14,3 @@ Here's how I want you to build it
 - Create the scroll down notification however you like however: create a component folder and put it in there for later reusage.
 - Add this component to the LandingPage.tsx
 - Use this LandingPage.tsx in the App.
-
-
-Before you actually implement it I want you to create a landing-page.md file where you've analyzed how you want to build it.
-If you have any questions feel free to ask.
