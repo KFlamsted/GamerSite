@@ -1,0 +1,45 @@
+Content page is the initial page you see when you scroll down.
+This content page will contain two things.
+- Title and description
+- List of socials and link to this
+
+This is a high level description, followed by the file/folder structure of this feature.
+
+#Title:
+Similar to title on the main page. Color is white with black drop shadow
+Top centered
+
+#Description:
+Description is in a box
+Background color of that box is #0077FF
+Box has rounded edges and a drop shadow.
+Text color is white
+
+#Socials list:
+The socials list clickable rectangle boxes
+The box is a link taking the user to that socials site
+Box should be from left to right:
+    - Socials logo
+    - The user handle
+    - Different background color
+    - Potentially a thumbnail
+Initially socials available:
+    - Youtube (Red background)
+    - Bluesky (Blue #0F73FF background)
+    - Twitch (Purple background)
+    - Twitter / X (Black background)
+    - Instagram (Yellow background)
+Text color is always white
+There should be a socials component that all the other social components inherit base from
+What social it is can be determined in a enum (or something similar)
+
+Description box width should match these socials list boxes
+
+#Load animation:
+All boxes has a small "fade in up" loading animation or whatever the standard load for boxes is called
+
+#File/folder structure:
+In the components folder create a SocialsList folder.
+This folder contains the base SocialComponent.tsx, each socials site specific component (YoutubeSocialsComponent.tsx) and a SocialList.tsx file that contains all the wished components
+In the existing ContentSection folder we create a DescriptionComponent.tsx
+In the ContextSection.tsx we add the Title, the DescriptionComponent and the SocialsList
