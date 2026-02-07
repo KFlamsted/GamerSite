@@ -26,4 +26,24 @@ export const socialMediaData: SocialData[] = [
     handle: "@NovazGamer",
     url: "https://instagram.com/novazgamer",
   },
+  {
+    platform: "FACEBOOK",
+    handle: "@NovazGamer",
+    url: "https://facebook.com/novazgamer",
+  },
+  {
+    platform: "TIKTOK",
+    handle: "@NovazGamer",
+    url: "https://tiktok.com/@novazgamer",
+  },
+  {
+    platform: "DISCORD",
+    handle: "NovazGamer",
+    url: "https://discord.gg/novazgamer",
+  },
+  {
+    platform: "KICK",
+    handle: "@NovazGamer",
+    url: "https://kick.com/novazgamer",
+  },
 ];
