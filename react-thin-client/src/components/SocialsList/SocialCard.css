@@ -9,6 +9,17 @@
   }
 }
 
+/* Background color classes for each platform */
+.social-card--youtube { background-color: #FF0000; }
+.social-card--bluesky { background-color: #0F73FF; }
+.social-card--twitch { background-color: #9146FF; }
+.social-card--twitter { background-color: #000000; }
+.social-card--instagram { background-color: #FCAF45; }
+.social-card--facebook { background-color: #1877F2; }
+.social-card--tiktok { background-color: #000000; }
+.social-card--discord { background-color: #5865F2; }
+.social-card--kick { background-color: #53FC18; }
+
 .social-card {
   display: flex;
   align-items: center;

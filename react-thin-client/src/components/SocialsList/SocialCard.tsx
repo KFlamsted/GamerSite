@@ -17,20 +17,24 @@ interface SocialCardProps {
   index: number;
 }
 
-const PLATFORM_STYLES: Record<SocialPlatform, { backgroundColor: string; icon: typeof FaYoutube }> = {
-  YOUTUBE: { backgroundColor: '#FF0000', icon: FaYoutube },
-  BLUESKY: { backgroundColor: '#0F73FF', icon: SiBluesky },
-  TWITCH: { backgroundColor: '#9146FF', icon: FaTwitch },
-  TWITTER: { backgroundColor: '#000000', icon: FaXTwitter },
-  INSTAGRAM: { backgroundColor: '#FCAF45', icon: FaInstagram },
-  FACEBOOK: { backgroundColor: '#1877F2', icon: FaFacebook },
-  TIKTOK: { backgroundColor: '#000000', icon: FaTiktok },
-  DISCORD: { backgroundColor: '#5865F2', icon: FaDiscord },
-  KICK: { backgroundColor: '#53FC18', icon: FaKickstarter },
+const PLATFORM_ICONS: Record<SocialPlatform, typeof FaYoutube> = {
+  YOUTUBE: FaYoutube,
+  BLUESKY: SiBluesky,
+  TWITCH: FaTwitch,
+  TWITTER: FaXTwitter,
+  INSTAGRAM: FaInstagram,
+  FACEBOOK: FaFacebook,
+  TIKTOK: FaTiktok,
+  DISCORD: FaDiscord,
+  KICK: FaKickstarter,
+};
+
+const getPlatformClassName = (platform: SocialPlatform): string => {
+  return `social-card--${platform.toLowerCase()}`;
 };
 
 const SocialCard = ({ social, index }: SocialCardProps) => {
-  const { backgroundColor, icon: Icon } = PLATFORM_STYLES[social.platform];
+  const Icon = PLATFORM_ICONS[social.platform];
 
   const handleClick = () => {
     window.open(social.url, '_blank', 'noopener,noreferrer');
@@ -38,9 +42,8 @@ const SocialCard = ({ social, index }: SocialCardProps) => {
 
   return (
     <div
-      className="social-card"
+      className={`social-card ${getPlatformClassName(social.platform)}`}
       style={{
-        backgroundColor,
         animationDelay: `${index * 0.1}s`,
       }}
       onClick={handleClick}
