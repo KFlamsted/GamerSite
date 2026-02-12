@@ -1,0 +1,16 @@
+.socials-list {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.socials-list-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .socials-list {
+    max-width: 100%;
+  }
+}
