@@ -1,16 +1,17 @@
 import { Grid } from '@mui/material';
 import SocialCard from './SocialCard';
-import { socialMediaData } from './dummyData';
+import { useSocials } from '../../hooks/useSocials';
 import './SocialsList.css';
 
 const SocialsList = () => {
-  const shouldUseGrid = socialMediaData.length > 5;
+  const socials = useSocials();
+  const shouldUseGrid = socials.length > 5;
 
   return (
     <div className="socials-list">
       {shouldUseGrid ? (
         <Grid container spacing={2}>
-          {socialMediaData.map((social, index) => (
+          {socials.map((social, index) => (
             <Grid key={social.platform} size={{ xs: 12, sm: 6 }}>
               <SocialCard social={social} index={index} />
             </Grid>
@@ -18,7 +19,7 @@ const SocialsList = () => {
         </Grid>
       ) : (
         <div className="socials-list-vertical">
-          {socialMediaData.map((social, index) => (
+          {socials.map((social, index) => (
             <SocialCard key={social.platform} social={social} index={index} />
           ))}
         </div>
