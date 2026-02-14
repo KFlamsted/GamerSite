@@ -1,12 +1,10 @@
 <?php
-/**
- * Social Card Custom Post Type
- *
- * Custom post type for managing social media cards with platform taxonomy
- * and meta fields for handle and URL.
- *
- * @package GamerSite
- */
+/*
+    Plugin Name: Socials Custom Post Type
+    Description: Creates a custom post type for social media links with categories
+    Version: 1.0
+    Author: KFlamsted
+*/
 
 // Prevent direct access
 if (!defined('ABSPATH')) {
