@@ -1,7 +1,7 @@
-import { Grid } from '@mui/material';
-import SocialCard from './SocialCard';
-import { useSocials } from '../../hooks/useSocials';
-import './SocialsList.css';
+import { Grid } from "@kflamsted/react-simple-grid";
+import SocialCard from "./SocialCard";
+import { useSocials } from "../../hooks/useSocials";
+import "./SocialsList.css";
 
 const SocialsList = () => {
   const socials = useSocials();
